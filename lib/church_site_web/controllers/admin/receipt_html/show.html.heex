@@ -1,0 +1,60 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="mb-6">
+    <a href={~p"/777/receipts"} class="text-indigo-600 hover:text-indigo-900">← Back to Receipts</a>
+  </div>
+
+  <div class="bg-white shadow-md rounded-lg p-6">
+    <h1 class="text-2xl font-bold mb-6">Receipt Details</h1>
+
+    <div class="grid grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-gray-500 text-sm">Receipt Number</h3>
+        <p class="text-lg"><%= @receipt.receipt_number %></p>
+      </div>
+
+      <div>
+        <h3 class="text-gray-500 text-sm">Date</h3>
+        <p class="text-lg"><%= Calendar.strftime(@receipt.payment_date, "%Y-%m-%d %H:%M:%S") %></p>
+      </div>
+
+      <div>
+        <h3 class="text-gray-500 text-sm">Amount</h3>
+        <p class="text-lg"><%= Decimal.to_string(@receipt.amount) %> <%= @receipt.currency %></p>
+      </div>
+
+      <div>
+        <h3 class="text-gray-500 text-sm">Status</h3>
+        <p class="text-lg">
+          <span class={status_badge_class(@receipt.payment_status)}>
+            <%= @receipt.payment_status %>
+          </span>
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-gray-500 text-sm">Payer Name</h3>
+        <p class="text-lg"><%= @receipt.payer_name %></p>
+      </div>
+
+      <div>
+        <h3 class="text-gray-500 text-sm">Phone Number</h3>
+        <p class="text-lg"><%= @receipt.payer_phone %></p>
+      </div>
+
+      <div>
+        <h3 class="text-gray-500 text-sm">Giving Type</h3>
+        <p class="text-lg"><%= @receipt.giving_type %></p>
+      </div>
+
+      <div>
+        <h3 class="text-gray-500 text-sm">Payment Method</h3>
+        <p class="text-lg"><%= @receipt.payment_method %></p>
+      </div>
+
+      <div>
+        <h3 class="text-gray-500 text-sm">Payment Reference</h3>
+        <p class="text-lg"><%= @receipt.payment_reference %></p>
+      </div>
+    </div>
+  </div>
+</div> 

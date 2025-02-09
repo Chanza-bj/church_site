@@ -1,0 +1,21 @@
+<div class="mx-auto max-w-2xl">
+  <div class="bg-white shadow overflow-hidden sm:rounded-lg">
+    <div class="px-4 py-5 sm:px-6">
+      <h3 class="text-lg leading-6 font-medium text-gray-900"><%= @announcement.title %></h3>
+      <p class="mt-1 max-w-2xl text-sm text-gray-500">
+        <span class={status_badge_class(@announcement.status)}><%= @announcement.status %></span>
+      </p>
+    </div>
+    <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+      <div class="prose max-w-none">
+        <%= @announcement.content %>
+      </div>
+    </div>
+    <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+      <div class="flex justify-end space-x-4">
+        <.link href={~p"/777/announcements"} class="text-gray-600 hover:text-gray-900">Back to list</.link>
+        <.link href={~p"/777/announcements/#{@announcement.id}/edit"} class="text-indigo-600 hover:text-indigo-900">Edit</.link>
+      </div>
+    </div>
+  </div>
+</div> 

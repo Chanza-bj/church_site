@@ -1,0 +1,852 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-light.eot');
+    src: url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-light.eot?#iefix') format('embedded-opentype'), url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-light.woff') format('woff'), url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-light.ttf') format('truetype'), url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-light.svg#OpenSansLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-regular.eot');
+    src: url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-regular.eot?#iefix') format('embedded-opentype'), url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-regular.woff') format('woff'), url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-regular.ttf') format('truetype'), url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-regular.svg#OpenSansRegular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-bold.eot');
+    src: url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-bold.eot?#iefix') format('embedded-opentype'), url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-bold.woff') format('woff'), url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-bold.ttf') format('truetype'), url('E:\church_site/wp-content/themes/langwitch/design/fonts/opensans/opensans-bold.svg#OpenSansBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US body {
+    font-family: Open Sans;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lang-en_US strong {
+    font-weight: bold;
+}
+
+.lang-en_US a.post-edit-link,
+.lang-en_US a.comment-edit-link,
+.lang-en_US a.comment-reply-link {
+    font-weight: bold;
+}
+
+.lang-en_US .page-title a.post-edit-link {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US h1 {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lang-en_US h2 {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lang-en_US h3 {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lang-en_US h4 {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lang-en_US h5 {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lang-en_US h6 {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lang-en_US h1 strong,
+.lang-en_US h2 strong,
+.lang-en_US h3 strong,
+.lang-en_US h4 strong,
+.lang-en_US h5 strong,
+.lang-en_US h6 strong {
+    font-weight: bold;
+}
+
+.lang-en_US p em,
+.lang-en_US p i {
+    font-style: italic;
+}
+
+.lang-en_US input,
+.lang-en_US textarea {
+    font-family: Open Sans;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lang-en_US select {
+    font-family: Open Sans;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lang-en_US .sbHolder a:link,
+.lang-en_US .sbHolder a:visited,
+.lang-en_US .sbHolder a:hover {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lang-en_US .ui-datepicker {
+    font-family: Open Sans;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lang-en_US .ui-datepicker .ui-widget-header {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .ui-datepicker table th {
+    font-weight: bold;
+}
+
+.lang-en_US .ui-datepicker table td a.ui-state-default {
+    font-weight: normal;
+}
+
+.lang-en_US .site-logo a,
+.lang-en_US .site-logo a:hover {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .site-header .header-top .nav-menu-header {
+    font-family: Open Sans;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lang-en_US .nav-menu-main>ul>li>a {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@media all and (max-width: 640px) {
+    .lang-en_US .nav-menu-main>ul>li>a {
+        font-family: Open Sans;
+        font-weight: bold;
+        font-style: normal;
+    }
+}
+
+.lang-en_US .entry-content table thead th {
+    font-weight: bold;
+}
+
+.lang-en_US .entry-content table tbody th {
+    font-weight: bold;
+}
+
+.lang-en_US .entry-content .tabstyle1 table thead th {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US table.english-table thead th {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lang-en_US table.english-table td:first-child {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .wp-caption .wp-caption-text {
+    font-style: italic;
+}
+
+.lang-en_US .ait-sc-button .title {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .ait-sc-button.simple {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-easy-slider-main .bx-wrapper li .bx-caption .bx-caption-desc span.bx-link-button {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-easy-slider-main ul.easy-slider li .easy-title {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-portfolio .filters-wrapper .filter-wrapper .selected {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lang-en_US .elm-portfolio .filters-wrapper .filter-wrapper .selected span {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-item-organizer .item .item-subtitle {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lang-en_US .elm-item-organizer .layout-list .item-title h3,
+.lang-en_US .elm-item-organizer .layout-box .item-title h3 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-posts-main .item-info {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-services-main .readmore a {
+    font-family: serif;
+    font-style: italic;
+}
+
+.lang-en_US .elm-events-main .item-info strong {
+    font-weight: normal;
+}
+
+.lang-en_US .elm-events-main .layout-list .event-date .entry-date .link-month {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-events-main .item-info {
+    font-family: Open Sans;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lang-en_US .elm-job-offers-main .job-contact {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-job-offers-main .job-contact strong {
+    font-weight: bold;
+}
+
+.lang-en_US .elm-testimonials-main .item .item-info .item-author {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lang-en_US .elm-testimonials-main .item-text {
+    font-style: normal;
+}
+
+.lang-en_US .elm-faq-main .faq-question {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-faq-main .faq-question .faq-q:before {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-toggles-main .ait-tabs ul.ait-tabs-nav li a {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-toggles-main .ait-tabs-vertical li .ait-tab-hover {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-toggles-main .ait-tabs .tabs-wrapper .selected {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-toggles-main .responsive-tabs-select {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-toggles-main .toggle-header .toggle-title {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .local-toggles .toggle-header .toggle-title {
+    font-weight: bold;
+}
+
+.lang-en_US .local-toggles .toggle-content .toggle-container {
+    font-family: Open Sans;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lang-en_US .elm-price-table .table-header .table-price {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-price-table .table-button a {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-price-table .table-header h3 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-price-table .table-body .table-row {
+    font-style: italic;
+}
+
+.lang-en_US .elm-price-table .ptable-item.table-featured .table-header h3 .ptab-description {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-opening-hours-main .day-title h5 {
+    font-family: Open Sans;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lang-en_US .elm-opening-hours-main .day-sat .day-title h5,
+.lang-en_US .elm-opening-hours-main .day-sat .day-data,
+.lang-en_US .elm-opening-hours-main .day-sun .day-title h5,
+.lang-en_US .elm-opening-hours-main .day-sun .day-data {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-opening-hours-main .day-sat .day-title,
+.lang-en_US .elm-opening-hours-main .day-sun .day-title,
+.lang-en_US .elm-opening-hours-main .day-sat .day-data,
+.lang-en_US .elm-opening-hours-main .day-sun .day-data {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-countdown-main .clock-data .clock-value {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-counters-main .counter-title {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-counters-main .counter-type-textbox .type-text {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-member-main .member-title .member-position-title {
+    font-weight: bold;
+}
+
+.lang-en_US .elm-member-main .member-title h3 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .elm-member-main .item-subtitle {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lang-en_US .elm-member-main .desc-wrap .entry-content-hider {
+    font-style: italic;
+    font-family: serif;
+}
+
+.lang-en_US .elm-google-map .gmap-infowindow-content p {
+    font-family: Open Sans;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.lang-en_US .elm-contact-form-main form p .input-row .input-label .label {
+    font-weight: bold;
+}
+
+.lang-en_US .elm-contact-form-main form .input-submit .submit-wrap input {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .gallery .gallery-caption {
+    font-style: italic;
+}
+
+.lang-en_US .comments-link .comments-count {
+    font-weight: bold;
+}
+
+.lang-en_US .hentry .entry-date a.link-day,
+.lang-en_US body.single-post .content-block .entry-date a.link-day {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .hentry .entry-date a.link-month,
+.lang-en_US body.single-post .content-block .entry-date a.link-month {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .hentry .entry-header .post-table h2,
+.lang-en_US body.single-post .content-block .entry-header .post-table h2 {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lang-en_US .hentry .entry-header .post-table .featured-post,
+.lang-en_US body.single-post .content-block .entry-header .post-table .featured-post {
+    font-weight: bold;
+}
+
+.lang-en_US .hentry .comments-link .comments-count,
+.lang-en_US body.single-post .content-block .comments-link .comments-count {
+    font-weight: normal;
+}
+
+.lang-en_US .hentry .entry-footer .more,
+.lang-en_US body.single-post .content-block .entry-footer .more {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .commentlist .comment-meta .fn {
+    font-weight: bold;
+}
+
+.lang-en_US #respond h3 small {
+    font-family: Open Sans;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.lang-en_US #respond form label .required {
+    font-weight: bold;
+}
+
+.lang-en_US #respond form input[type="submit"] {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .comments-area h2 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .commentlist .comment-meta time {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lang-en_US #respond h3 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .author-info .author-description h2 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .nav-single .page-numbers,
+.lang-en_US .nav-pagination .page-numbers {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .widget-container .widget-title h3,
+.lang-en_US .widget_rss .widget-title {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lang-en_US .widget_posts h4 {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lang-en_US .widget_calendar th {
+    font-weight: bold;
+}
+
+.lang-en_US .widget_calendar tbody td#today {
+    font-weight: bold;
+}
+
+.lang-en_US .widget_calendar tbody td a {
+    font-weight: bold;
+}
+
+.lang-en_US blockquote,
+.lang-en_US q {
+    font-weight: bold;
+}
+
+.wooButton {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.woocommerce form .button {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.woocommerce ul.products li a .onsale,
+body.woocommerce-page ul.products li a .onsale,
+.woocommerce ul.products li a .onsale {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.woocommerce ul.products li a h3,
+body.woocommerce-page ul.products li a h3,
+.woocommerce ul.products li a h3 {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body.woocommerce ul.products li a.product_type_variable,
+body.woocommerce-page ul.products li a.product_type_variable,
+.woocommerce ul.products li a.product_type_variable {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.woocommerce ul.products li a .price .amount,
+body.woocommerce-page ul.products li a .price .amount,
+.woocommerce ul.products li a .price .amount {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body.woocommerce div.product.hentry .summary .product_title,
+body.woocommerce-page div.product.hentry .summary .product_title,
+.woocommerce div.product.hentry .summary .product_title {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body.woocommerce div.product.hentry .summary .price,
+body.woocommerce-page div.product.hentry .summary .price,
+.woocommerce div.product.hentry .summary .price {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body.woocommerce div.product.hentry .summary .cart .single_add_to_cart_button,
+body.woocommerce-page div.product.hentry .summary .cart .single_add_to_cart_button,
+.woocommerce div.product.hentry .summary .cart .single_add_to_cart_button {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.woocommerce div.product.hentry .woocommerce-tabs .tabs li a,
+body.woocommerce-page div.product.hentry .woocommerce-tabs .tabs li a,
+.woocommerce div.product.hentry .woocommerce-tabs .tabs li a {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.woocommerce div.product.hentry .woocommerce-tabs #tab-reviews .commentlist li.comment .comment-text .meta strong,
+body.woocommerce-page div.product.hentry .woocommerce-tabs #tab-reviews .commentlist li.comment .comment-text .meta strong,
+.woocommerce div.product.hentry .woocommerce-tabs #tab-reviews .commentlist li.comment .comment-text .meta strong {
+    font-weight: bold;
+}
+
+body.woocommerce div.product.hentry .woocommerce-tabs #tab-reviews .commentlist li.comment .comment-text .meta time,
+body.woocommerce-page div.product.hentry .woocommerce-tabs #tab-reviews .commentlist li.comment .comment-text .meta time,
+.woocommerce div.product.hentry .woocommerce-tabs #tab-reviews .commentlist li.comment .comment-text .meta time {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.woocommerce div.product .summary .cart .quantity .minus,
+body.woocommerce div.product .summary .cart .quantity .plus,
+body.woocommerce-page div.product .summary .cart .quantity .minus,
+body.woocommerce-page div.product .summary .cart .quantity .plus,
+.woocommerce div.product .summary .cart .quantity .minus,
+.woocommerce div.product .summary .cart .quantity .plus {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.woocommerce nav.woocommerce-pagination ul li span,
+body.woocommerce-page nav.woocommerce-pagination ul li span,
+.woocommerce nav.woocommerce-pagination ul li span {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.woocommerce .woocommerce-message,
+body.woocommerce-page .woocommerce-message,
+.woocommerce .woocommerce-message {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.woocommerce .woocommerce-info,
+body.woocommerce-page .woocommerce-info,
+.woocommerce .woocommerce-info {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.woocommerce .woocommerce-error,
+body.woocommerce-page .woocommerce-error,
+.woocommerce .woocommerce-error {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.woocommerce div.product .summary .variations label {
+    font-weight: bold;
+}
+
+body.woocommerce-cart .shop_table.cart th,
+.woocommerce .shop_table.cart th {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.woocommerce-cart .shop_table.cart tbody td.product-remove a,
+.woocommerce .shop_table.cart tbody td.product-remove a {
+    font-weight: bold;
+}
+
+body.woocommerce-cart .shop_table.cart tbody td.product-name .variation dt,
+.woocommerce .shop_table.cart tbody td.product-name .variation dt {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.woocommerce-cart .shop_table.cart tbody td.actions .coupon .button,
+.woocommerce .shop_table.cart tbody td.actions .coupon .button {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.woocommerce-cart .shop_table.cart tbody td.actions .button,
+.woocommerce .shop_table.cart tbody td.actions .button {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.woocommerce-cart .shop_table.cart tbody td.product-quantity .quantity,
+.woocommerce .shop_table.cart tbody td.product-quantity .quantity {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body.woocommerce-cart .checkout-button,
+.woocommerce .checkout-button {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.woocommerce-cart .cart-collaterals .shipping_calculator h2,
+.woocommerce .cart-collaterals .shipping_calculator h2 {
+    font-family: Open Sans;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.woocommerce .login .button,
+.woocommerce .checkout_coupon .button {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.woocommerce label .required {
+    font-weight: bold;
+}
+
+#order_review .cart-subtotal th,
+#order_review .cart-subtotal td {
+    font-weight: bold;
+}
+
+.methods.payment_methods li label {
+    font-weight: bold;
+}
+
+.pp_woocommerce .comment-respond .stars a {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#place_order {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.woocommerce .lost_reset_password .button {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.woocommerce-tabs .show_review_form {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.ait-woocommerce-cart-widget .cart_list li .description a.title,
+.widget_shopping_cart .cart_list li .description a.title {
+    font-family: Poppins;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.ait-woocommerce-cart-widget .cart_list li .description .quantity,
+.widget_shopping_cart .cart_list li .description .quantity {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ait-woocommerce-cart-widget .buttons .button,
+.widget_shopping_cart .buttons .button {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.woocommerce-page .ait-woocommerce-cart-widget .cart-wrapper .cart-content .total strong,
+.woocommerce .cart-wrapper .cart-content .total strong {
+    font-family: Poppins;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body.woocommerce-page .ait-woocommerce-cart-widget .cart-wrapper .cart-content .total .amount,
+.woocommerce .cart-wrapper .cart-content .total .amount {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body.woocommerce-page .ait-woocommerce-cart-widget .comment-reply-title,
+.woocommerce .comment-reply-title {
+    font-family: Poppins;
+    font-weight: 700;
+    font-style: normal;
+}

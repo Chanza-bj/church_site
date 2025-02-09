@@ -1,0 +1,156 @@
+<div class="about-section">
+    <div class="container">
+        <div class="history-section">
+            <p class="intro-text">
+                The <%= @church_name %> Seventh-day Adventist Church started life as a church plant...
+                <!-- Add your church's specific history here -->
+            </p>
+        </div>
+
+        <div class="feature-box prayer-circle">
+            <img src={~p"/images/prayer-circle.jpg"} alt="Prayer Circle" />
+            <h2>Prayer Circle</h2>
+            <p>
+                Join us in our weekly prayer meetings where we come together as a community to share our burdens 
+                and celebrate God's blessings. Our prayer ministry is dedicated to supporting each other through 
+                intercessory prayer and spiritual encouragement.
+            </p>
+        </div>
+
+        <div class="vision-section">
+            <h1>Church vision/mission statement or slogan here</h1>
+            <img src={~p"/images/sda-congregation.jpg"} alt="Church Congregation" class="full-width-image" />
+            <h3>Hymn sing with children</h3>
+            <p>
+                Our church is committed to nurturing spiritual growth through worship, fellowship, and service. 
+                We believe in creating an inclusive environment where all generations can grow together in faith.
+            </p>
+        </div>
+
+        <div class="feature-box feed-hungry">
+            <img src={~p"/images/feed-the-hungry.jpg"} alt="Feed the homeless project" />
+            <h2>Feed the homeless project</h2>
+            <p>
+                Our community outreach programs demonstrate God's love in practical ways. Through various initiatives,
+                we strive to make a positive impact in our community and share Christ's love with those in need.
+            </p>
+        </div>
+
+        <div class="beliefs-section">
+            <h2>Our Beliefs</h2>
+            <p>
+                Seventh-day Adventists accept the Bible as the only source of our beliefs, 
+                as the only standard of faith and practice for Christians.
+            </p>
+            <a href="/about/beliefs" class="cta-button">See What We Believe</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .about-section {
+        padding: 60px 0;
+        background: #fff;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .intro-text {
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 40px;
+    }
+
+    .feature-box {
+        margin: 60px 0;
+        text-align: center;
+    }
+
+    .feature-box img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+
+    .feature-box h2 {
+        color: #1B3F8F;
+        margin: 20px 0;
+        font-size: 2em;
+    }
+
+    .vision-section {
+        text-align: center;
+        margin: 60px 0;
+    }
+
+    .vision-section h1 {
+        color: #1B3F8F;
+        font-size: 2.5em;
+        margin-bottom: 30px;
+    }
+
+    .vision-section h3 {
+        color: #333;
+        margin: 20px 0;
+    }
+
+    .full-width-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .beliefs-section {
+        text-align: center;
+        margin: 60px 0;
+        padding: 40px;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+
+    .beliefs-section h2 {
+        color: #1B3F8F;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #1B3F8F;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #152f6a;
+    }
+
+    p {
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .about-section {
+            padding: 40px 0;
+        }
+
+        .vision-section h1 {
+            font-size: 2em;
+        }
+
+        .feature-box h2 {
+            font-size: 1.8em;
+        }
+    }
+</style> 

@@ -1,0 +1,19 @@
+<.header>
+  Media Item <%= @media_item.id %>
+  <:subtitle>View media item details</:subtitle>
+  <:actions>
+    <.link href={~p"/admin/media/#{@media_item}/edit"}>
+      <.button>Edit media</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.list>
+  <:item title="Title"><%= @media_item.title %></:item>
+  <:item title="Description"><%= @media_item.description %></:item>
+  <:item title="URL"><%= @media_item.url %></:item>
+  <:item title="Type"><%= @media_item.type %></:item>
+  <:item title="Status"><%= @media_item.status %></:item>
+</.list>
+
+<.back navigate={~p"/admin/media"}>Back to media</.back> 

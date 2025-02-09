@@ -1,0 +1,11 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="max-w-3xl mx-auto">
+    <div class="mb-6">
+      <h1 class="text-2xl font-bold">Edit Page</h1>
+    </div>
+
+    <.form :let={f} for={@changeset} action={~p"/777/pages/#{@page}"}>
+      <.form_content changeset={@changeset} form={f} />
+    </.form>
+  </div>
+</div> 

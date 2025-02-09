@@ -1,0 +1,51 @@
+<div class="container mx-auto px-4 py-8">
+  <h1>Pages</h1>
+</div>
+
+<div class="container mx-auto px-4 py-8">
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold">Pages</h1>
+    <.link href={~p"/777/pages/new"} class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">
+      New Page
+    </.link>
+  </div>
+
+  <div class="bg-white shadow-md rounded-lg overflow-hidden">
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Slug</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Updated</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200">
+        <%= for page <- @pages do %>
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+              <%= page.title %>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+              <%= page.slug %>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap">
+              <span class={status_badge_class(page.status)}>
+                <%= String.capitalize(page.status) %>
+              </span>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+              <%= Calendar.strftime(page.updated_at, "%Y-%m-%d %H:%M") %>
+            </td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium space-x-2">
+              <.link href={~p"/777/pages/#{page}"} class="text-indigo-600 hover:text-indigo-900">View</.link>
+              <.link href={~p"/777/pages/#{page}/edit"} class="text-indigo-600 hover:text-indigo-900">Edit</.link>
+              <.link href={~p"/777/pages/#{page}"} method="delete" data-confirm="Are you sure?" class="text-red-600 hover:text-red-900">Delete</.link>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div> 

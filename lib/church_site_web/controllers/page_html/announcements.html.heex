@@ -1,0 +1,32 @@
+<div class="max-w-4xl mx-auto py-8 px-4">
+  <h1 class="text-3xl font-bold mb-8">Church Announcements</h1>
+
+  <%= if Enum.empty?(@announcements) do %>
+    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+      <p class="text-yellow-700">No announcements available at this time.</p>
+    </div>
+  <% else %>
+    <div class="space-y-8">
+      <%= for announcement <- @announcements do %>
+        <div class="bg-white shadow rounded-lg p-6">
+          <h2 class="text-xl font-semibold mb-2"><%= announcement.title %></h2>
+          <div class="prose max-w-none mb-4">
+            <%= announcement.content %>
+          </div>
+          <div class="text-sm text-gray-500">
+            Status: <%= announcement.status %><br>
+            Published: <%= if announcement.published_at, do: Calendar.strftime(announcement.published_at, "%B %d, %Y at %I:%M %p"), else: "Not set" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%# Debug information %>
+  <%= if Application.get_env(:church_site, :env) == :dev do %>
+    <div class="mt-8 p-4 bg-gray-100 rounded">
+      <h3 class="font-bold">Debug Info:</h3>
+      <pre class="text-sm"><%= inspect(@announcements, pretty: true) %></pre>
+    </div>
+  <% end %>
+</div> 

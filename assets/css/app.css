@@ -1,0 +1,1374 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* This file is for your main application CSS */
+
+.header-topbar {
+  background: #1e3c96;
+  color: white;
+  padding: 8px 0;
+}
+
+.header-topbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-info span {
+  margin-right: 20px;
+  font-size: 0.9rem;
+}
+
+.contact-info i {
+  margin-right: 5px;
+}
+
+.social-links a {
+  color: white;
+  margin-left: 15px;
+  font-size: 1.1rem;
+}
+
+.site-header {
+  background: white;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-search {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  align-self: flex-end;
+}
+
+.logo-container {
+  text-align: center;
+  padding: 30px 0;
+}
+
+.logo-link {
+  display: inline-block;
+}
+
+.church-logo {
+  width: 95px;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.site-title {
+  font-family: 'Poppins', sans-serif;
+  color: #1B3F8F;
+  line-height: 1.2;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.church-name {
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.denomination {
+  font-size: 24px;
+  display: inline-block;
+}
+
+.church-type {
+  color: #1e3c96;
+}
+
+.header-right {
+  text-align: right;
+  padding: 10px 0;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  color: #999;
+  font-size: 16px;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.search-box {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.search-box input {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  width: 180px;
+}
+
+.search-box button {
+  background: none;
+  border: none;
+  color: #999;
+  margin-left: -25px;
+  cursor: pointer;
+}
+
+.main-nav {
+  background: #1e3c96;
+  padding: 5px 0;
+}
+
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  text-align: center;
+}
+
+.nav-menu li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.nav-menu a:hover {
+  color: #ddd;
+}
+
+.hero-section {
+  background-image: url("/images/children-background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.hero-subtitle {
+  font-size: 24px;
+  font-style: italic;
+  font-family: "Crimson Text", serif;
+  line-height: 1.4;
+}
+
+.welcome-section {
+  padding: 60px 0;
+  background: white;
+}
+
+.welcome-content {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.welcome-title {
+  color: #444;
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.welcome-subtitle {
+  color: #666;
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 40px;
+  font-family: "Crimson Text", serif;
+}
+
+.welcome-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.welcome-text {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.welcome-text p {
+  margin-bottom: 20px;
+}
+
+.read-more {
+  color: #1e3c96;
+  text-decoration: none;
+}
+
+.pastor-signature {
+  margin-top: 30px;
+}
+
+.pastor-signature img {
+  max-width: 200px;
+  margin-bottom: 10px;
+}
+
+.pastor-signature p {
+  color: #444;
+  font-weight: 500;
+}
+
+.welcome-image {
+  text-align: right;
+}
+
+.bordered-image {
+  max-width: 100%;
+  border: 8px solid #1e3c96;
+}
+
+.service-times {
+  background: white;
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.service-times h3 {
+  color: #1e3c96;
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+.service-times p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  background: #1e3c96;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background: #162a69;
+}
+
+.features-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  text-align: center;
+  padding: 40px 30px;
+  background: #f9f9f9;
+  border-radius: 3px;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #1e3c96;
+  margin-bottom: 20px;
+}
+
+.feature-box h3 {
+  color: #1e3c96;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-box p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.feature-link {
+  color: #1e3c96;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cta-section {
+  background: #1e3c96;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.cta-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #1e3c96;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #f5f5f5;
+}
+
+.site-footer {
+  background: #000;
+  color: #666;
+  padding: 40px 0 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-brand .footer-logo {
+  width: 60px;
+  margin-bottom: 15px;
+}
+
+.footer-brand .church-name {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.social-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #1e3c96;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e3c96;
+}
+
+.service-times h3,
+.quick-links h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #333;
+}
+
+.service-group {
+  margin-bottom: 15px;
+}
+
+.service-group h4 {
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.service-time {
+  color: #666;
+  margin: 5px 0;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.quick-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links li {
+  color: #666;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.quick-links a {
+  color: #666;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-top: 1px solid #222;
+  padding-top: 15px;
+  gap: px;
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-brand {
+    text-align: center;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
+
+.about-section {
+  padding: 80px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.about-title {
+  color: #444;
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.about-subtitle {
+  color: #666;
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 50px;
+  font-family: "Crimson Text", serif;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.about-card {
+  text-align: center;
+}
+
+.card-image {
+  border: 4px solid #1e3c96;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.about-card h3 {
+  color: #444;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.about-card p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .about-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+.bible-verse-section {
+  background-image: url("/images/congregation-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 100px 0;
+}
+
+.verse-overlay {
+  background: rgba(30, 60, 150, 0.85); /* #1e3c96 with opacity */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.verse-content {
+  text-align: center;
+  color: white;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 20px;
+}
+
+.verse-text {
+  font-size: 32px;
+  line-height: 1.4;
+  font-family: "Crimson Text", serif;
+  font-style: italic;
+  margin: 0;
+  font-weight: 400;
+}
+
+.verse-reference {
+  color: #fff;
+  text-decoration: none;
+}
+
+.verse-citation {
+  font-size: 24px;
+  margin-top: 20px;
+  font-family: "Crimson Text", serif;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .verse-text {
+    font-size: 24px;
+  }
+  
+  .verse-citation {
+    font-size: 20px;
+  }
+}
+
+.events-section {
+  padding: 80px 0;
+  background: #fff;
+  text-align: center;
+}
+
+.events-title {
+  color: #444;
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.events-subtitle {
+  color: #666;
+  font-size: 24px;
+  font-style: italic;
+  margin-bottom: 40px;
+  font-family: "Crimson Text", serif;
+}
+
+.events-content {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.no-events {
+  color: #666;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.events-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.event-button {
+  display: inline-block;
+  background: #1e3c96;
+  color: white;
+  padding: 15px 40px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 0;
+  transition: background-color 0.3s ease;
+  min-width: 250px;
+}
+
+.event-button:hover {
+  background: #162a69;
+}
+
+@media (max-width: 768px) {
+  .events-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .event-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.subscription-section {
+  background: #1e3c96;
+  padding: 40px 0;
+}
+
+.subscription-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.subscription-text h2 {
+  color: white;
+  font-size: 36px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.subscription-text p {
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+  margin: 5px 0 0;
+  font-family: "Crimson Text", serif;
+  opacity: 0.9;
+}
+
+.subscription-form {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  max-width: 600px;
+}
+
+.subscription-form input {
+  flex: 1;
+  padding: 12px 20px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+}
+
+.subscription-form input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.subscription-form button {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border: none;
+  color: #1e3c96;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .subscription-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .subscription-form {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+#sticky-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #1B3F8F;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+#sticky-menu.visible {
+  transform: translateY(0);
+}
+
+.sticky-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sticky-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.sticky-logo img {
+  height: 30px;
+  width: auto;
+}
+
+.sticky-nav ul {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sticky-nav a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Giving Page Styles */
+.giving-hero {
+  background-image: url("/images/giving-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.giving-hero .hero-overlay {
+  background: rgba(27, 63, 143, 0.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.giving-hero h1 {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.giving-hero p {
+  font-size: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+.giving-section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.giving-methods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.method-card {
+  background: #f8f9fa;
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.method-card:hover {
+  transform: translateY(-5px);
+}
+
+.method-icon {
+  font-size: 40px;
+  color: #1B3F8F;
+  margin-bottom: 20px;
+}
+
+.method-card h3 {
+  color: #1B3F8F;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.give-button {
+  display: inline-block;
+  background: #1B3F8F;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.give-button:hover {
+  background: #152f6a;
+}
+
+.giving-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 60px 0;
+  text-align: center;
+}
+
+.feature i {
+  font-size: 32px;
+  color: #1B3F8F;
+  margin-bottom: 15px;
+}
+
+.feature h4 {
+  color: #1B3F8F;
+  margin-bottom: 10px;
+}
+
+.giving-form-section {
+  background: #f8f9fa;
+  padding: 60px 0;
+  border-radius: 8px;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.donation-form {
+  margin-top: 30px;
+}
+
+.amount-options {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.amount-btn {
+  background: white;
+  border: 2px solid #1B3F8F;
+  color: #1B3F8F;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.amount-btn:hover, .amount-btn.active {
+  background: #1B3F8F;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.frequency-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.frequency-btn {
+  background: white;
+  border: 2px solid #1B3F8F;
+  color: #1B3F8F;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.frequency-btn:hover, .frequency-btn.active {
+  background: #1B3F8F;
+  color: white;
+}
+
+.submit-button {
+  background: #1B3F8F;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #152f6a;
+}
+
+.giving-info-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.info-card {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.info-card h3 {
+  color: #1B3F8F;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.giving-ways {
+  list-style: none;
+  padding: 0;
+}
+
+.giving-ways li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.giving-ways i {
+  color: #1B3F8F;
+  margin-right: 15px;
+  font-size: 20px;
+}
+
+.contact-info {
+  color: #666;
+  line-height: 1.8;
+}
+
+.contact-info i {
+  color: #1B3F8F;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .giving-methods,
+  .giving-features,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amount-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .giving-hero h1 {
+    font-size: 36px;
+  }
+
+  .giving-hero p {
+    font-size: 18px;
+  }
+}
+
+/* Payment Modal Styles */
+.payment-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.payment-methods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.payment-method {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.payment-method:hover {
+  border-color: #1B3F8F;
+  transform: translateY(-2px);
+}
+
+.payment-method img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+.payment-method.mtn:hover {
+  border-color: #ffd100;
+}
+
+.payment-method.airtel:hover {
+  border-color: #ff0000;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #666;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.receipt-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 40px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: white;
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.receipt-logo {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.receipt-body {
+  padding: 20px 0;
+}
+
+.receipt-number, .receipt-date {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.receipt-details {
+  margin: 30px 0;
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  padding: 20px 0;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 5px 0;
+}
+
+.label {
+  font-weight: bold;
+  color: #666;
+}
+
+.receipt-footer {
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .receipt-container, .receipt-container * {
+    visibility: visible;
+  }
+  .receipt-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+  }
+}
+
+/* Admin Login Styles */
+.admin-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+.login-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1B3F8F;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-primary {
+  background: #1B3F8F;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #152f6a;
+}
+
+.payment-status {
+    text-align: center;
+    padding: 20px;
+}
+
+.status-message {
+    margin: 20px 0;
+}
+
+.receipt-link {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.ok-button {
+    padding: 8px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ok-button:hover {
+    background-color: #218838;
+}

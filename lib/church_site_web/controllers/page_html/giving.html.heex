@@ -1,0 +1,373 @@
+<div class="giving-hero">
+  <div class="hero-overlay">
+    <div class="container">
+      <h1>Supporting God's Work</h1>
+      <p>"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver." - 2 Corinthians 9:7</p>
+    </div>
+  </div>
+</div>
+
+<div class="giving-section">
+  <div class="container">
+    <div class="giving-methods">
+      <div class="method-card">
+        <div class="method-icon">
+          <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <h3>Tithe</h3>
+        <p>Return 10% of your income to support God's work through our church ministries.</p>
+        <a href="#give-now" class="give-button">Give Tithe</a>
+      </div>
+
+      <div class="method-card">
+        <div class="method-icon">
+          <i class="fas fa-church"></i>
+        </div>
+        <h3>Church Offering</h3>
+        <p>Support our local church operations, maintenance, and community programs.</p>
+        <a href="#give-now" class="give-button">Give Offering</a>
+      </div>
+
+      <div class="method-card">
+        <div class="method-icon">
+          <i class="fas fa-globe-africa"></i>
+        </div>
+        <h3>Mission Projects</h3>
+        <p>Help spread the gospel globally through our mission projects and outreach programs.</p>
+        <a href="#give-now" class="give-button">Support Missions</a>
+      </div>
+    </div>
+
+    <div class="giving-features">
+      <div class="feature">
+        <i class="fas fa-lock"></i>
+        <h4>Secure Giving</h4>
+        <p>Your transactions are protected with bank-level security</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-history"></i>
+        <h4>Give Anytime</h4>
+        <p>Convenient 24/7 online giving platform</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-receipt"></i>
+        <h4>Tax Deductible</h4>
+        <p>Receive annual giving statements for tax purposes</p>
+      </div>
+    </div>
+
+    <div id="give-now" class="giving-form-section">
+      <div class="form-container">
+        <h2>Make Your Gift</h2>
+        <p>Choose your giving type and amount below</p>
+        
+        <form class="donation-form" onsubmit="showPaymentModal(event)">
+          <div class="amount-options">
+            <button type="button" class="amount-btn">K25</button>
+            <button type="button" class="amount-btn">K50</button>
+            <button type="button" class="amount-btn">K100</button>
+            <button type="button" class="amount-btn">K500</button>
+            <button type="button" class="amount-btn custom">Other Amount</button>
+          </div>
+
+          <div class="form-group">
+            <label>Select Giving Type</label>
+            <select class="form-control" id="giving-type">
+              <option>Tithe</option>
+              <option>Church Offering</option>
+              <option>Mission Projects</option>
+              <option>Building Fund</option>
+              <option>Youth Ministry</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Giving Frequency</label>
+            <div class="frequency-options">
+              <button type="button" class="frequency-btn active">One Time</button>
+              <button type="button" class="frequency-btn">Weekly</button>
+              <button type="button" class="frequency-btn">Monthly</button>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-button">
+            <i class="fas fa-heart"></i> Give Now
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div id="payment-status" class="mt-4 mb-4">
+      <!-- Status messages will be inserted here -->
+    </div>
+  </div>
+</div>
+
+<div class="giving-info-section">
+  <div class="container">
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Why We Give</h3>
+        <p>Giving is an act of worship that expresses our gratitude, reveals our priorities, and helps advance God's kingdom. Through your generosity, we can continue to share Christ's love with our community and beyond.</p>
+      </div>
+      
+      <div class="info-card">
+        <h3>Other Ways to Give</h3>
+        <ul class="giving-ways">
+          <li>
+            <i class="fas fa-envelope"></i>
+            <span>Mail your gift to the church office</span>
+          </li>
+          <li>
+            <i class="fas fa-mobile-alt"></i>
+            <span>Text "GIVE" to (260) 973-767852</span>
+          </li>
+          <li>
+            <i class="fas fa-building"></i>
+            <span>Drop off during church office hours</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Need Help?</h3>
+        <p>If you need assistance with your giving or have any questions, please don't hesitate to contact our church office:</p>
+        <p class="contact-info">
+          <i class="fas fa-phone"></i> <%= @phone_number %><br>
+          <i class="fas fa-envelope"></i> <%= @email %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add this modal markup just before closing body tag -->
+<div id="payment-modal" class="payment-modal">
+  <div class="payment-modal-content">
+    <h3>Select Payment Method</h3>
+    <div class="payment-methods">
+      <button class="payment-method mtn" onclick="handlePayment('mtn')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/New-mtn-logo.png" alt="MTN Money" />
+        <span>MTN Money</span>
+      </button>
+      <button class="payment-method airtel" onclick="handlePayment('airtel')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Airtel_logo.png" alt="Airtel Money" />
+        <span>Airtel Money</span>
+      </button>
+    </div>
+    <button class="modal-close" onclick="closePaymentModal()">×</button>
+  </div>
+</div>
+
+<style>
+  .loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 10px auto;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .payment-modal-content {
+    max-width: 400px;
+    padding: 20px;
+  }
+
+  #payment-status {
+    margin-top: 15px;
+    text-align: center;
+  }
+</style>
+
+<script>
+  function showPaymentModal(event) {
+    event.preventDefault();
+    document.getElementById('payment-modal').style.display = 'flex';
+  }
+
+  function closePaymentModal() {
+    document.getElementById('payment-modal').style.display = 'none';
+  }
+
+  async function handlePayment(method) {
+    const amount = document.querySelector('.amount-btn.active')?.textContent || 
+                  document.querySelector('input[name="custom_amount"]')?.value;
+    const givingType = document.getElementById('giving-type').value;
+    
+    // First prompt for name
+    const name = prompt("Please enter your name:");
+    if (!name) {
+      alert('Please provide your name');
+      return;
+    }
+    
+    // Then prompt for phone
+    const phone = prompt(`Enter your ${method.toUpperCase()} Money number:`);
+    
+    if (!amount || !phone) {
+      alert('Please provide both amount and phone number');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/payments/initiate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          method,
+          amount: parseFloat(amount.replace('K', '')),
+          phone_number: phone,
+          giving_type: givingType,
+          payer_name: name
+        })
+      });
+
+      const data = await response.json();
+      
+      if (data.success) {
+        // Show status checking modal
+        showStatusCheckModal(data.reference, name);
+        
+        // Start polling for status
+        startStatusCheck(data.reference);
+      } else {
+        alert('Payment initiation failed. Please try again.');
+      }
+    } catch (error) {
+      console.error('Payment error:', error);
+      alert('Payment processing failed. Please try again later.');
+    }
+    
+    closePaymentModal();
+  }
+
+  function showStatusCheckModal(referenceId, name) {
+    const modal = document.createElement('div');
+    modal.id = 'status-check-modal';
+    modal.className = 'payment-modal';
+    modal.innerHTML = `
+      <div class="payment-modal-content">
+        <h3>Payment Status</h3>
+        <p>Thank you ${name}!</p>
+        <p>Please check your phone for the payment prompt.</p>
+        <div id="payment-status" class="alert alert-info">
+          Checking payment status...
+          <div class="loading-spinner"></div>
+        </div>
+        <button id="status-ok-button" style="display: none;" class="submit-button">OK</button>
+      </div>
+    `;
+    document.body.appendChild(modal);
+    modal.style.display = 'flex';
+
+    // Update the OK button handler to not reload
+    document.getElementById('status-ok-button').addEventListener('click', () => {
+        closeStatusCheckModal();
+        // Clear the form
+        const form = document.querySelector('.donation-form');
+        if (form) form.reset();
+        // Reset amount buttons
+        document.querySelectorAll('.amount-btn').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.classList.contains('custom')) {
+                btn.textContent = 'Other Amount';
+            }
+        });
+    });
+  }
+
+  function closeStatusCheckModal() {
+    const modal = document.getElementById('status-check-modal');
+    if (modal) {
+        modal.style.display = 'none';
+        setTimeout(() => modal.remove(), 300); // Remove after fade out
+    }
+  }
+
+  async function checkPaymentStatus(referenceId) {
+    try {
+      const response = await fetch(`/api/payments/status/${referenceId}`);
+      const data = await response.json();
+      return data.status;
+    } catch (error) {
+      console.error('Status check error:', error);
+      return null;
+    }
+  }
+
+  function startStatusCheck(referenceId) {
+    let attempts = 0;
+    const maxAttempts = 12; // Increase to 1 minute (5 seconds * 12)
+    
+    const statusCheck = async () => {
+      attempts++;
+      const response = await fetch(`/api/payments/status/${referenceId}`);
+      const data = await response.json();
+      const statusDiv = document.getElementById('payment-status');
+      const okButton = document.getElementById('status-ok-button');
+      const spinner = document.querySelector('.loading-spinner');
+      
+      if (data.success && data.status === "COMPLETED") {
+        statusDiv.textContent = 'Payment successful! Thank you for your gift.';
+        statusDiv.style.color = 'green';
+        spinner.style.display = 'none';
+        
+        if (data.receipt_number) {
+          statusDiv.innerHTML = `
+            Payment successful! Thank you for your gift.<br>
+            <a href="/receipts/${data.receipt_number}" class="btn btn-primary mt-2" target="_blank">
+              View Receipt (${data.receipt_number})
+            </a>
+          `;
+        }
+        
+        okButton.style.display = 'block';
+        return;
+      }
+      
+      if (data.status === "FAILED") {
+        statusDiv.textContent = 'Payment failed. Please try again.';
+        statusDiv.style.color = 'red';
+        spinner.style.display = 'none';
+        okButton.style.display = 'block';
+        return;
+      }
+      
+      if (attempts >= maxAttempts) {
+        statusDiv.textContent = 'Status check timed out. Please contact support if payment was made.';
+        spinner.style.display = 'none';
+        okButton.style.display = 'block';
+        return;
+      }
+      
+      // Continue checking every 5 seconds
+      setTimeout(statusCheck, 5000);
+    };
+    
+    statusCheck();
+  }
+
+  // Add this for amount button handling
+  document.querySelectorAll('.amount-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      if (btn.classList.contains('custom')) {
+        const amount = prompt('Enter custom amount:');
+        if (amount) {
+          btn.textContent = `K${amount}`;
+        }
+      }
+    });
+  });
+</script> 

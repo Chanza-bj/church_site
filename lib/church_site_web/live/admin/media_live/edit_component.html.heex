@@ -1,0 +1,22 @@
+<div class="modal">
+  <.form
+    for={@changeset}
+    id="media-form"
+    phx-target={@myself}
+    phx-submit="save">
+    
+    <div class="form-group">
+      <.input field={@changeset[:title]} type="text" label="Title" />
+      <.input field={@changeset[:description]} type="textarea" label="Description" />
+      <.input field={@changeset[:type]} type="select" label="Type" options={["slider", "welcome", "feature", "about", "pastor"]} />
+      <.input field={@changeset[:section]} type="text" label="Section" />
+      <.input field={@changeset[:status]} type="select" label="Status" options={["active", "inactive"]} />
+      <.input field={@changeset[:display_order]} type="number" label="Display Order" />
+    </div>
+
+    <div class="mt-4 flex justify-end gap-2">
+      <.button type="submit">Save</.button>
+      <.button type="button" phx-click="modal-close">Cancel</.button>
+    </div>
+  </.form>
+</div> 

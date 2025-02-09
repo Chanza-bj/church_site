@@ -1,0 +1,151 @@
+<div class="receipt-container">
+  <div class="receipt">
+    <div class="receipt-header">
+      <h2><%= @church_name %></h2>
+      <p><%= @church_address %></p>
+    </div>
+
+    <div class="receipt-body">
+      <h1>Receipt</h1>
+      <div class="receipt-number">
+        Receipt #: <%= @receipt.receipt_number %>
+      </div>
+
+      <div class="receipt-details">
+        <div class="detail-row">
+          <span class="label">Date:</span>
+          <span class="value"><%= Calendar.strftime(@receipt.payment_date, "%B %d, %Y") %></span>
+        </div>
+
+        <div class="detail-row">
+          <span class="label">Name:</span>
+          <span class="value"><%= @receipt.payer_name %></span>
+        </div>
+
+        <div class="detail-row">
+          <span class="label">Phone:</span>
+          <span class="value"><%= @receipt.payer_phone %></span>
+        </div>
+
+        <div class="detail-row">
+          <span class="label">Amount:</span>
+          <span class="value"><%= @receipt.currency %> <%= :erlang.float_to_binary(Decimal.to_float(@receipt.amount), decimals: 2) %></span>
+        </div>
+
+        <div class="detail-row">
+          <span class="label">Payment Method:</span>
+          <span class="value"><%= @receipt.payment_method %></span>
+        </div>
+
+        <div class="detail-row">
+          <span class="label">Giving Type:</span>
+          <span class="value"><%= String.capitalize(@receipt.giving_type) %></span>
+        </div>
+
+        <div class="detail-row">
+          <span class="label">Reference:</span>
+          <span class="value"><%= @receipt.payment_reference %></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="receipt-footer">
+      <p>Thank you for your generous giving!</p>
+      <small>This is an official receipt for your records.</small>
+    </div>
+
+    <div class="receipt-actions">
+      <button onclick="window.print()" class="print-button">
+        Print Receipt
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .receipt-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+  }
+
+  .receipt {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .receipt-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .receipt-header h2 {
+    margin: 0;
+    color: #333;
+  }
+
+  .receipt-body {
+    margin: 2rem 0;
+  }
+
+  .receipt-number {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+
+  .detail-row {
+    display: flex;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .label {
+    flex: 1;
+    font-weight: bold;
+    color: #555;
+  }
+
+  .value {
+    flex: 2;
+    color: #333;
+  }
+
+  .receipt-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px solid #eee;
+  }
+
+  .receipt-actions {
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .print-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .print-button:hover {
+    background: #0056b3;
+  }
+
+  @media print {
+    .receipt-actions {
+      display: none;
+    }
+
+    .receipt {
+      box-shadow: none;
+    }
+  }
+</style> 

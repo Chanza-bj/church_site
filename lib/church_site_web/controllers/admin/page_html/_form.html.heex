@@ -1,0 +1,30 @@
+<div class="space-y-6">
+  <div>
+    <.input field={@form[:title]} type="text" label="Title" required />
+  </div>
+
+  <div>
+    <.input field={@form[:content]} type="textarea" label="Content" required rows={15} />
+  </div>
+
+  <div>
+    <.input field={@form[:status]} type="select" label="Status" options={[{"Draft", "draft"}, {"Published", "published"}]} />
+  </div>
+
+  <div>
+    <.input field={@form[:meta_description]} type="textarea" label="Meta Description" rows={2} />
+  </div>
+
+  <div>
+    <.input field={@form[:meta_keywords]} type="text" label="Meta Keywords" />
+  </div>
+
+  <div class="flex justify-end space-x-3">
+    <.link href={~p"/777/pages"} class="px-4 py-2 text-sm text-gray-700 hover:text-gray-900">
+      Cancel
+    </.link>
+    <.button type="submit" class="px-4 py-2">
+      Save Page
+    </.button>
+  </div>
+</div> 

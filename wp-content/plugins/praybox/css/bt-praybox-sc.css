@@ -1,0 +1,108 @@
+/* v1.4
+// PRAYBOX FOOTER FORMFIELD (USED FOR FLAGGING REQUESTS: ABUSE OR PRAYED FOR)
+*/
+
+.pbx-formfield-footer {
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+}
+
+.pbx-formfield-footer button {
+    border-radius: 4px;
+}
+
+.pbx-formfield-footer button:first-child {
+    float: left;
+}
+
+.pbx-formfield-footer button:last-child {
+    float: right;
+}
+
+.pbx-modal-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    display: none;
+}
+
+.pbx-modal {
+    width: 50%;
+    position: relative;
+    margin: 10% auto;
+    padding: 10px 20px 70px 20px;
+    border-radius: 10px;
+    background: #fff;
+    display: none;
+}
+
+.pbx-modal h3.pbx-title {
+    margin-top: 0px;
+}
+
+/* v1.3
+#praybox_wrapper, form.pbx-form, .pbx-formfield {width: 100%; margin: 0px; padding-bottom: 5px; box-sizing: border-box;}
+
+.pbx-formfield label {width: 30%; margin: 0; margin-right: 5%; box-sizing: border-box;}
+.pbx-formfield span {font-size: smaller;}
+.pbx-formfield input[type="text"] {width: 65%; margin: 0; box-sizing: border-box;}
+.pbx-formfield input[type="checkbox"] {width: auto; margin: 0; margin-right: 5%; box-sizing: border-box;}
+.pbx-formfield input[type="submit"] {float: right; width: auto; margin: 0; box-sizing: border-box;}
+.pbx-formfield textarea {width: 100%; margin: 0; box-sizing: border-box;}
+
+.pbx-formfield form.pbx-flag {float: left; width: auto; margin: 0; box-sizing: border-box;}
+.pbx-formfield form.pbx-prayed {float: right; width: auto; margin: 0; box-sizing: border-box;}
+
+
+table.pbx-req {width: 100%; margin-top: 5px; border-top: 1px dotted #ccc;}
+table.pbx-req th {font-weight: bold;}
+*/
+
+/* PRE v1.3
+#praybox table.praybox {border: 0px !important; width: 100%;}
+#praybox table.praybox td {padding: 2px 8px !important;}
+#praybox tr.pb-titlerow {}
+#praybox tr.pb-datarow {border-bottom: 1px dotted #999999;}
+#praybox tr.pb-titlerow td {font-size: 13px; border: 0px !important; font-weight: bold; text-align: left; background-color: #e6e6e6;}
+#praybox tr.pb-datarow td {font-size: 13px; border: 0px !important; text-align: left;}
+#praybox tr.pb-datarow td a {color: #CC0000; font-weight: bold;}
+#praybox tr.pb-datarow td.input {text-align: center;}
+#praybox tr.pb-datarow td input[type="submit"] {font-size: 11px !important; font-weight: bold; text-transform: uppercase; margin: 0px auto;}
+
+#praybox {}
+#praybox input[type="submit"] {font-size: 11px !important; font-weight: bold; text-transform: uppercase; margin: 0px auto;}
+#praybox div.title {margin-left: 10px; font-weight: bold; font-size: larger;}
+#praybox div.thankyou {width: 100%; font-weight: bold; font-size: larger; font-style: italic; text-align: center;}
+#praybox div.intro {width: 100%; text-align: left; font-size: 13px; padding: 10px 0px;}
+#praybox div.intro ul {margin-left: 20px; font-size: 13px;}
+#praybox div.back {margin: 10px 0px; color: #CC0000; font-weight: bold; text-align: left; font-size: 12px;}
+#praybox div.back a {color: #CC0000;}
+#praybox table.details {border: 1px solid #cccccc; background-color: #e6e6e6; margin-top: 10px;}
+#praybox table.details td {border: 0px !important; font-size: 13px; padding: 4px 8px !important;}
+#praybox table.details td.label {width: 25%; font-weight: bold;}
+#praybox table.details td.response {text-align: right;}
+#praybox table.details td.content {}
+#praybox table.details td.content form.flag {float:right;}
+#praybox table.details td.content form.flag input[type="submit"] {background-color: #CC0000; color: #FFFFFF; border: 1px solid #666666; cursor: pointer; padding: 1px 2px; font-size: 10px !important;}
+
+#praybox table.subform {border: 0px; background-color: transparent; margin-top: 10px;}
+#praybox table.subform tr.poneyhot {display:none !important;}
+#praybox table.subform td {border: 0px !important; font-size: 13px; padding: 4px 8px !important; vertical-align: top;}
+#praybox table.subform td.label {width: 25%; font-weight: bold;}
+#praybox table.subform td.input {text-align: left;}
+#praybox table.subform td.input input, #praybox table.subform td.input textarea {width: 90%; font-size: 13px;}
+#praybox table.subform td.checkbox {}
+#praybox table.subform td.submit {text-align: center;}
+#praybox table.subform td.submit input {}
+
+#praybox .pagination {text-align: right; font-size: 12px; margin: 4px; color: #000000;}
+#praybox .pagination a {color: #FFFFFF; padding: 1px 3px; background-color: #999999;}
+#praybox .pagination a.active {background-color: #666666;}
+#praybox .pagination a:hover {background-color: #000000;}
+
+*/

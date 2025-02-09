@@ -1,0 +1,8 @@
+<.header>
+  Edit Media Item
+  <:subtitle>Edit your media item details.</:subtitle>
+</.header>
+
+<.media_form changeset={@changeset} action={~p"/admin/media/#{@media_item}"} />
+
+<.back navigate={~p"/admin/media"}>Back to media</.back> 

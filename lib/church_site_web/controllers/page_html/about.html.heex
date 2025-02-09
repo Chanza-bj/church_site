@@ -1,0 +1,115 @@
+<div class="about-section">
+    <div class="container">
+        <h1>About Us</h1>
+        
+        <div class="church-history">
+            <p>The <%= @church_name %> Seventh-day Adventist Church started life as a church plant...</p>
+            <!-- Add your church's specific history here -->
+        </div>
+
+        <div class="mission-vision">
+            <h2>Our Vision/Mission</h2>
+            <p>[Your vision/mission statement here]</p>
+        </div>
+
+        <div class="beliefs-preview">
+            <h2>Our Beliefs</h2>
+            <p>Seventh-day Adventists accept the Bible as the only source of our beliefs, as the only standard of faith and practice for Christians.</p>
+            <a href="/about/beliefs" class="cta-button">See What We Believe</a>
+        </div>
+
+        <div class="service-times">
+            <h2>Regular Service Times</h2>
+            <h3>Saturdays (Sabbaths)</h3>
+            <ul>
+                <li>9:15 am – Sabbath School</li>
+                <li>11:00 am – Divine Worship Service</li>
+                <li>12:30 pm – Fellowship Lunch (3rd Saturday)</li>
+            </ul>
+            
+            <h3>Wednesdays</h3>
+            <ul>
+                <li>7:00 pm – Prayer Meeting</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+    .about-section {
+        padding: 60px 0;
+        background: #fff;
+    }
+
+    .about-section .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .about-section h1 {
+        color: #1B3F8F;
+        margin-bottom: 40px;
+        font-size: 2.5em;
+    }
+
+    .about-section h2 {
+        color: #1B3F8F;
+        margin: 30px 0 20px;
+        font-size: 1.8em;
+    }
+
+    .about-section h3 {
+        color: #333;
+        margin: 20px 0 10px;
+        font-size: 1.3em;
+    }
+
+    .church-history, .mission-vision, .beliefs-preview, .service-times {
+        margin-bottom: 40px;
+    }
+
+    .about-section p {
+        line-height: 1.6;
+        color: #444;
+        margin-bottom: 20px;
+    }
+
+    .about-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .about-section ul li {
+        margin: 10px 0;
+        color: #444;
+    }
+
+    .cta-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #1B3F8F;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background-color: #152f6a;
+    }
+
+    @media (max-width: 768px) {
+        .about-section {
+            padding: 40px 0;
+        }
+
+        .about-section h1 {
+            font-size: 2em;
+        }
+
+        .about-section h2 {
+            font-size: 1.5em;
+        }
+    }
+</style> 

@@ -1,0 +1,85 @@
+<.header>
+  Media Items
+  <:actions>
+    <.link href={~p"/admin/media/new"}>
+      <.button>New Media Item</.button>
+    </.link>
+  </:actions>
+</.header>
+
+<.table id="media" rows={@media_items}>
+  <:col :let={media} label="Title"><%= media.title %></:col>
+  <:col :let={media} label="Type"><%= media.type %></:col>
+  <:col :let={media} label="Status"><%= media.status %></:col>
+  <:col :let={media} label="Preview">
+    <img src={media.url} alt={media.title} class="w-24 h-24 object-cover" />
+  </:col>
+  <:action :let={media}>
+    <.link href={~p"/admin/media/#{media}/edit"}>Edit</.link>
+  </:action>
+  <:action :let={media}>
+    <.simple_form :let={f} for={%{}} as={:media} action={~p"/admin/media/#{media}"} method="delete">
+      <:actions>
+        <.button class="text-sm text-red-600 hover:text-red-700" data-confirm="Are you sure?">Delete</.button>
+      </:actions>
+    </.simple_form>
+  </:action>
+</.table>
+
+<div>
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold">Media Library</h1>
+  </div>
+
+  
+
+  <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <%= for media <- @media_files do %>
+      <div class="relative group">
+        <div class="relative h-48 w-full overflow-hidden rounded-lg bg-white">
+          <img src={media.url} alt={media.alt_text || media.title} class="h-full w-full object-cover object-center" />
+        </div>
+        <p class="mt-2 block truncate text-sm font-medium text-gray-900"><%= media.title %></p>
+        <p class="block text-sm font-medium text-gray-500"><%= media.type %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script>
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    alert('URL copied to clipboard!');
+  });
+}
+
+document.getElementById('file-upload').addEventListener('change', function(e) {
+  const files = e.target.files;
+  if (!files.length) return;
+
+  const formData = new FormData();
+  for (let i = 0; i < files.length; i++) {
+    formData.append('file', files[i]);
+  }
+
+  const token = document.querySelector("meta[name='csrf-token']").content;
+  
+  fetch('/777/upload', {
+    method: 'POST',
+    headers: {
+      'X-CSRF-Token': token
+    },
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.location) {
+      window.location.reload();
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('Upload failed. Please try again.');
+  });
+});
+</script> 

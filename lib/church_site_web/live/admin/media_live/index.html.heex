@@ -1,0 +1,116 @@
+<div class="admin-container">
+  <h1>Media Gallery</h1>
+
+  <div class="upload-section">
+    <form id="upload-form" phx-submit="save" phx-change="validate">
+      <div class="form-group">
+        <label>Upload Images</label>
+        <div class="upload-drop-zone" phx-drop-target={@uploads.media.ref}>
+          <.live_file_input upload={@uploads.media} />
+          <p>Drag and drop files here or click to select</p>
+        </div>
+
+        <%= if @uploads.media.entries != [] do %>
+          <div class="preview-grid">
+            <%= for entry <- @uploads.media.entries do %>
+              <div class="preview-item">
+                <%= if entry.preview_url do %>
+                  <img src={entry.preview_url} />
+                <% end %>
+                <div class="progress-bar">
+                  <span style={"width: #{entry.progress}%"}></span>
+                </div>
+                <button type="button" phx-click="cancel-upload" phx-value-ref={entry.ref} class="btn-cancel">
+                  &times;
+                </button>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="form-group">
+        <label for="type">Type</label>
+        <select name="media_item[type]" id="type" required>
+          <option value="">Select type...</option>
+          <option value="slider">Slider</option>
+          <option value="welcome">Welcome</option>
+          <option value="feature">Feature</option>
+          <option value="about">About</option>
+          <option value="pastor">Pastor</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="section">Section</label>
+        <input type="text" name="media_item[section]" id="section" placeholder="e.g., welcome_image, pastor_signature">
+      </div>
+
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="media_item[title]" id="title" required>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea name="media_item[description]" id="description"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="alt_text">Alt Text</label>
+        <input type="text" name="media_item[alt_text]" id="alt_text" required>
+      </div>
+
+      <div class="form-group">
+        <label for="display_order">Display Order</label>
+        <input type="number" name="media_item[display_order]" id="display_order">
+      </div>
+
+      <div class="form-group">
+        <label for="status">Status</label>
+        <select name="media_item[status]" id="status" required>
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-primary">Upload</button>
+    </form>
+  </div>
+
+  <div class="media-grid">
+    <%= for media_item <- @media_items do %>
+      <div class="media-card">
+        <img src={media_item.url} alt={media_item.alt_text}>
+        <div class="media-info">
+          <h3><%= media_item.title %></h3>
+          <p><%= media_item.description %></p>
+          <div class="media-meta">
+            <span class="type"><%= media_item.type %></span>
+            <span class="section"><%= media_item.section %></span>
+            <span class="status"><%= media_item.status %></span>
+          </div>
+          <div class="media-actions">
+            <button phx-click="edit" phx-value-id={media_item.id} class="btn-edit">
+              Edit
+            </button>
+            <button phx-click="delete" phx-value-id={media_item.id} data-confirm="Are you sure?" class="btn-delete">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%= if @editing_item do %>
+    <.live_component
+      module={ChurchSiteWeb.Admin.MediaLive.EditComponent}
+      id={@editing_item.id}
+      title={@page_title}
+      action={@live_action}
+      media_item={@editing_item}
+      return_to={Routes.admin_media_index_path(@socket, :index)}
+    />
+  <% end %>
+</div> 

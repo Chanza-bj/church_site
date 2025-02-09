@@ -1,0 +1,46 @@
+<div class="mx-auto w-full max-w-3xl px-4">
+  <div class="bg-white rounded-lg shadow-sm">
+    <.simple_form :let={f} for={@changeset} action={@action} multipart={true} class="space-y-4 p-4">
+      <.error :if={@changeset.action}>
+        <div class="alert alert-danger">
+          Oops, something went wrong! Please check the errors below.
+        </div>
+      </.error>
+
+      <div class="space-y-4">
+        <.input field={f[:title]} type="text" label="Title" class="w-full" />
+        <.input field={f[:description]} type="textarea" label="Description" class="w-full h-24" />
+
+        <div class="grid grid-cols-2 gap-3">
+          <.input field={f[:type]} type="select" label="Type" 
+            options={["slider", "gallery", "banner", "welcome", "leader", "other"]} class="w-full" />
+          <.input field={f[:status]} type="select" label="Status" 
+            options={["active", "inactive"]} class="w-full" />
+        </div>
+
+        <div class="border border-dashed border-gray-300 rounded p-3">
+          <.input field={f[:file]} type="file" label="Upload File" class="w-full" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <.input field={f[:section]} type="select" label="Section" 
+            options={["", "pastor", "elder", "deacon", "department"]} class="w-full" />
+          <.input field={f[:display_order]} type="number" label="Display Order" class="w-full" />
+        </div>
+
+        <.input field={f[:alt_text]} type="text" label="Alt Text" class="w-full" />
+      </div>
+
+      <:actions>
+        <div class="flex justify-end gap-3">
+          <.link navigate={~p"/admin/media"} class="px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
+            Cancel
+          </.link>
+          <.button class="px-3 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
+            Save Media Item
+          </.button>
+        </div>
+      </:actions>
+    </.simple_form>
+  </div>
+</div> 

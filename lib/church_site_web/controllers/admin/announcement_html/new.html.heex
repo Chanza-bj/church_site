@@ -1,0 +1,18 @@
+<div class="mx-auto max-w-2xl">
+  <h1 class="text-2xl font-bold mb-6">Announcement</h1>
+  <.form :let={f} for={@changeset} action={@action} method="post">
+    <.input field={f[:title]} type="text" label="Title" />
+    <.input field={f[:content]} type="textarea" label="Content" />
+    <.input field={f[:status]} type="select" options={[{"Draft", "draft"}, {"Published", "published"}]} label="Status" />
+    <.input field={f[:priority]} type="number" label="Priority" />
+    <.input field={f[:published_at]} type="datetime-local" label="Publish Date" />
+    <.input field={f[:expires_at]} type="datetime-local" label="Expiry Date" />
+
+    <:actions>
+      <.button type="submit" phx-disable-with="Saving...">Save</.button>
+      <.link href={~p"/777/announcements"} class="rounded-lg bg-gray-100 px-4 py-2 text-gray-600 hover:bg-gray-200">
+        Cancel
+      </.link>
+    </:actions>
+  </.form>
+</div> 
